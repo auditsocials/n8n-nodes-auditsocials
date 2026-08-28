@@ -10,6 +10,8 @@ export class AuditSocialsApi implements ICredentialType {
 
 	displayName = 'AuditSocials API';
 
+	icon = { light: 'file:auditsocials.svg', dark: 'file:auditsocials.dark.svg' } as const;
+
 	documentationUrl = 'https://www.auditsocials.com/compliance-api';
 
 	properties: INodeProperties[] = [

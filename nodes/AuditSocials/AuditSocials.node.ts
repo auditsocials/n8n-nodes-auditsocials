@@ -1,18 +1,20 @@
 import type { INodeType, INodeTypeDescription } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'n8n-workflow';
 
 export class AuditSocials implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'AuditSocials',
 		name: 'auditSocials',
-		icon: 'file:auditsocials.svg',
+		icon: { light: 'file:auditsocials.svg', dark: 'file:auditsocials.dark.svg' },
 		group: ['transform'],
 		version: 1,
+		usableAsTool: true,
 		subtitle: '={{$parameter["operation"]}}',
 		description:
 			'Check ad or social content against live platform advertising policy across 8 platforms before it publishes',
 		defaults: { name: 'AuditSocials' },
-		inputs: ['main'],
-		outputs: ['main'],
+		inputs: [NodeConnectionTypes.Main],
+		outputs: [NodeConnectionTypes.Main],
 		credentials: [{ name: 'auditSocialsApi', required: true }],
 		requestDefaults: {
 			baseURL: 'https://www.auditsocials.com',
