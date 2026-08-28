@@ -1,0 +1,60 @@
+{
+  "name": "n8n-nodes-auditsocials",
+  "version": "0.1.2",
+  "description": "Check AI-generated social & ad content against live platform policy across 8 platforms (Meta, TikTok, Google Ads, YouTube, X, LinkedIn, Snapchat, Pinterest) before it publishes.",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "auditsocials",
+    "compliance",
+    "advertising-policy",
+    "platform-policy",
+    "content-moderation",
+    "ai-content",
+    "guardrail"
+  ],
+  "license": "MIT",
+  "homepage": "https://www.auditsocials.com/compliance-api",
+  "author": {
+    "name": "AuditSocials",
+    "email": "info@auditsocials.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auditsocials/n8n-nodes-auditsocials.git"
+  },
+  "engines": {
+    "node": ">=18.10"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/AuditSocialsApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/AuditSocials/AuditSocials.node.js"
+    ]
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-n8n-nodes-base": "^1.16.7",
+    "gulp": "^5.0.0",
+    "n8n-workflow": "*",
+    "typescript": "^5.5.0"
+  }
+}
