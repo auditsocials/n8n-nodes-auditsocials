@@ -22,7 +22,7 @@ restart n8n.
 
 Create an **AuditSocials API** credential and paste your key. Get a free key at
 [auditsocials.com/compliance-api](https://www.auditsocials.com/compliance-api)
-— 50 checks/month, no card.
+— 50 credits/month (about 10 checks), no card.
 
 ## Operation
 
@@ -51,7 +51,7 @@ Ready-made workflows using this pattern: https://www.auditsocials.com/templates
 
 ## Pricing
 
-Free 50/mo · Starter $99/5,000 · Growth $299/25,000 — one credit per check.
+Credits per month: Free 50 · Starter $99/5,000 · Growth $299/25,000 — a compliance check uses 5 credits (≈10 / 1,000 / 5,000 checks).
 
 ## License
 
